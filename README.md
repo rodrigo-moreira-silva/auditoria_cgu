@@ -87,9 +87,31 @@ A skill opera em dois modos, detectados automaticamente pelo tipo de solicitaç�
 
 **Modo análise** — o usuário fornece um artefato redigido e pede revisão, validação ou feedback. O modelo verifica conformidade com as normas e emite um parecer estruturado.
 
-**Modo geração** — o usuário fornece insumos estruturados (Matriz de Achados, Matriz de Planejamento, achado estruturado, notas de campo, dados de acompanhamento…) e pede para redigir ou gerar qualquer artefato — relatório completo, seção isolada, achado individual, SA ou NA. O modelo redige usando exclusivamente as informações fornecidas, inserindo marcadores `[PREENCHER: ...]` onde faltar dado obrigatório.
+**Modo geração** — o usuário fornece insumos estruturados e pede para redigir ou gerar um artefato. O modelo produz o texto já conforme as normas, usando exclusivamente as informações fornecidas.
 
-> ⚠️ **No modo geração, o modelo não inventa informações.** Nenhum valor, data, nome, causa, norma ou contextualização será criado sem respaldo nos insumos fornecidos pelo usuário.
+**Insumos aceitos:**
+
+| Insumo | Artefatos que podem ser gerados |
+|---|---|
+| Matriz de Achados | Relatório completo (parcial), achados individuais, recomendações, conclusão, resumo |
+| Matriz de Planejamento | Introdução, resumo; complementa a Matriz de Achados para o relatório completo |
+| Ambas as matrizes | Relatório completo com menos marcadores pendentes |
+| Achado estruturado (critério, condição, causa, efeito) | Achado individual redigido, recomendação correspondente |
+| Notas de campo / dados brutos | Achado individual, SA, NA |
+| Relatório já redigido | Resumo/highlight, conclusão |
+| Dados de acompanhamento | Nota de Auditoria (NA) de monitoramento |
+
+**Como acionar o modo geração:** basta fornecer os insumos e usar verbos como "gere", "redija", "elabore" ou "escreva". O modelo detecta automaticamente que se trata de geração, não de análise.
+
+**Marcadores `[PREENCHER: ...]`:** quando uma informação obrigatória para o artefato não estiver presente nos insumos, o modelo insere um marcador no lugar exato do texto, com instrução objetiva do que precisa ser fornecido. Ao final do artefato, é apresentada uma tabela consolidada com todos os marcadores pendentes agrupados por seção.
+
+Exemplo de marcador:
+```
+[PREENCHER: origem e justificativa da auditoria — risco, materialidade ou criticidade
+que motivou a inclusão no Plano de Auditoria Interna]
+```
+
+> ⚠️ **O modelo não inventa informações.** Nenhum valor, data, nome, causa, norma ou contextualização será criado sem respaldo nos insumos fornecidos. Campos obrigatórios ausentes viram marcadores, nunca texto genérico.
 
 ---
 
