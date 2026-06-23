@@ -8,15 +8,17 @@
 
 Este repositório contém uma **skill para sistemas baseados em LLM** que automatiza a verificação de conformidade de artefatos de auditoria produzidos pela Controladoria-Geral da União (CGU). A skill instrui o modelo a analisar documentos de auditoria contra três normas internas e emitir um parecer estruturado com status, pontos críticos e sugestões de melhoria.
 
+Os arquivos de norma são **divididos por tema** — o modelo carrega apenas os arquivos relevantes para o tipo de artefato submetido, em vez de carregar as normas completas a cada chamada.
+
 ---
 
 ## Normas de Referência
 
-| Arquivo | Norma | Escopo |
-|---|---|---|
-| `references/MOT_2017.md` | Manual de Orientações Técnicas 2017 | Normas gerais de execução, comunicação e estrutura do relatório |
-| `references/OP_2019.md` | Orientação Prática: Relatório de Auditoria 2019 | Estrutura detalhada, componentes de cada seção, atributos de qualidade |
-| `references/Metodologia_Riscos_2_0.md` | Metodologia de Gestão de Riscos 2.0 | Identificação, avaliação e tratamento de riscos |
+| Norma | Escopo |
+|---|---|
+| Manual de Orientações Técnicas 2017 (MOT 2017) | Normas gerais de execução, comunicação e estrutura do relatório |
+| Orientação Prática: Relatório de Auditoria 2019 (OP 2019) | Estrutura detalhada, componentes de cada seção, atributos de qualidade |
+| Metodologia de Gestão de Riscos 2.0 | Identificação, avaliação e tratamento de riscos |
 
 > A OP 2019 detalha e operacionaliza o MOT 2017. Em caso de conflito aparente, a OP 2019 prevalece para questões de elaboração do relatório.
 
@@ -34,14 +36,34 @@ Este repositório contém uma **skill para sistemas baseados em LLM** que automa
 ## Estrutura do Repositório
 
 ```
-cgu-auditoria-skill/
-├── SKILL.md                          # Definição da skill (workflow, critérios, output)
+auditoria_cgu/
+├── SKILL.md                              # Definição da skill (workflow, critérios, mapeamento de arquivos)
 ├── references/
-│   ├── MOT_2017.md                   # Manual de Orientações Técnicas 2017
-│   ├── OP_2019.md                    # Orientação Prática: Relatório de Auditoria 2019
-│   └── Metodologia_Riscos_2_0.md     # Metodologia de Riscos 2.0
+│   ├── op_qualidade.md                   # OP 2019 — atributos de qualidade (cap. 1)
+│   ├── op_planejamento_relatorio.md      # OP 2019 — planejamento do relatório (cap. 2)
+│   ├── op_resumo.md                      # OP 2019 — Resumo/highlight (seção 3.4)
+│   ├── op_introducao.md                  # OP 2019 — Introdução (seção 3.7)
+│   ├── op_achados.md                     # OP 2019 — Achados: componentes e organização (seções 3.8–3.8.1)
+│   ├── op_recomendacoes.md               # OP 2019 — Recomendações e planos de ação (seção 3.9)
+│   ├── op_conclusao.md                   # OP 2019 — Conclusão (seção 3.10)
+│   ├── op_aspectos_formais.md            # OP 2019 — Formatação, quadros, assinaturas (cap. 4)
+│   ├── op_revisao.md                     # OP 2019 — Revisão de relatórios (cap. 5)
+│   ├── op_causa_raiz.md                  # OP 2019 — Análise de causa raiz (apêndice A)
+│   ├── op_matrizes.md                    # OP 2019 — Matriz de Planejamento e Achados (apêndices C e D)
+│   ├── mot_qualidade.md                  # MOT 2017 — qualidade das comunicações e redação (seções 6.2–6.3)
+│   ├── mot_estrutura_relatorio.md        # MOT 2017 — formas e componentes do relatório (seções 6.5.1–6.5.2)
+│   ├── mot_comunicacao.md                # MOT 2017 — planejamento e encaminhamento (seções 6.1, 6.4, 6.6, 6.7)
+│   ├── mot_achados.md                    # MOT 2017 — achados: requisitos e componentes (seções 5.4–5.4.3)
+│   ├── mot_recomendacoes.md              # MOT 2017 — recomendações (seções 5.6–5.6.1)
+│   ├── mot_matrizes.md                   # MOT 2017 — Matrizes de Riscos, Planejamento e Achados
+│   ├── mot_monitoramento.md              # MOT 2017 — monitoramento de recomendações (cap. 7)
+│   ├── riscos_fundamentos.md             # Riscos 2.0 — parâmetros legais e conceitos (caps. 1–2)
+│   ├── riscos_estrutura.md               # Riscos 2.0 — estrutura de gestão e competências (cap. 3)
+│   └── riscos_metodologia.md             # Riscos 2.0 — processo completo de gestão de riscos (cap. 4)
 └── README.md
 ```
+
+O `SKILL.md` contém uma tabela de mapeamento `artefato → arquivos a ler`, de forma que o modelo consulta apenas o subconjunto relevante para cada análise.
 
 ---
 
@@ -62,79 +84,56 @@ Ideal para uso recorrente. Tudo que for colocado nas instruções do projeto fic
    ```
 2. No [claude.ai](https://claude.ai), crie um **Project** (menu lateral → *New Project*)
 3. Abra as configurações do projeto → **Project Instructions**
-4. Cole, em sequência, o conteúdo dos seguintes arquivos:
-   - `SKILL.md` — instruções da skill (raiz do repositório)
-   - `references/MOT_2017.md` — Manual de Orientações Técnicas 2017
-   - `references/OP_2019.md` — Orientação Prática: Relatório de Auditoria 2019
-   - `references/Metodologia_Riscos_2_0.md` — Metodologia de Riscos 2.0
+4. Cole, em sequência:
+   - o conteúdo de `SKILL.md` (raiz do repositório)
+   - o conteúdo dos arquivos em `references/` relevantes para o seu caso de uso (veja tabela de mapeamento no `SKILL.md`)
 5. Salve — a skill estará ativa em todas as conversas desse projeto
 
-> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Os três arquivos de referência juntos somam ~600 KB; carregue apenas os que forem necessários para o seu caso de uso.
+> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários para o seu caso de uso — não é preciso incluir todos os 21 arquivos.
 
 **Opção B — Cola direto na conversa**
 
-Para uso pontual, cole o conteúdo do `SKILL.md` no início de uma conversa nova antes de submeter o artefato. Sem os arquivos de referência completos, o modelo usará seu conhecimento geral das normas — suficiente para análises básicas.
+Para uso pontual, cole o conteúdo do `SKILL.md` no início de uma conversa nova antes de submeter o artefato. Sem os arquivos de referência, o modelo usará seu conhecimento geral das normas — suficiente para análises básicas.
 
 ---
 
-### Instalação via API (Python)
+### Integração via API (Python)
 
-Para pipelines automatizados, o script abaixo puxa os arquivos diretamente do GitHub — sem precisar clonar o repositório:
+O script abaixo carrega seletivamente apenas os arquivos relevantes para o tipo de artefato, puxando direto do GitHub:
 
 ```python
 import httpx
 
-BASE = "https://raw.githubusercontent.com/rodrigo-moreira-silva/auditoria_cgu/main"
+BASE = "https://raw.githubusercontent.com/rodrigo-moreira-silva/auditoria_cgu/main/references"
 
-skill = httpx.get(f"{BASE}/SKILL.md").text
-mot   = httpx.get(f"{BASE}/references/MOT_2017.md").text
-op    = httpx.get(f"{BASE}/references/OP_2019.md").text
-riscos = httpx.get(f"{BASE}/references/Metodologia_Riscos_2_0.md").text
+# Mapeamento: tipo de artefato → arquivos a carregar
+REFERENCIAS = {
+    "introducao":      ["op_introducao.md", "mot_estrutura_relatorio.md", "op_qualidade.md"],
+    "achado":          ["op_achados.md", "mot_achados.md", "op_causa_raiz.md"],
+    "recomendacoes":   ["op_recomendacoes.md", "mot_recomendacoes.md"],
+    "conclusao":       ["op_conclusao.md", "mot_estrutura_relatorio.md"],
+    "resumo":          ["op_resumo.md", "op_qualidade.md"],
+    "matriz":          ["op_matrizes.md", "mot_matrizes.md"],
+    "riscos":          ["riscos_metodologia.md", "riscos_fundamentos.md"],
+}
 
-system_prompt = f"""{skill}
+def carregar_referencias(tipo_artefato: str) -> str:
+    arquivos = REFERENCIAS.get(tipo_artefato, [])
+    blocos = []
+    for arquivo in arquivos:
+        conteudo = httpx.get(f"{BASE}/{arquivo}").text
+        blocos.append(f"### {arquivo}\n\n{conteudo}")
+    return "\n\n---\n\n".join(blocos)
 
----
-
-## Documentos Normativos Carregados
-
-### MOT 2017
-{mot}
-
-### OP 2019
-{op}
-
-### Metodologia de Riscos 2.0
-{riscos}
-"""
+def montar_system_prompt(tipo_artefato: str) -> str:
+    skill = httpx.get(
+        "https://raw.githubusercontent.com/rodrigo-moreira-silva/auditoria_cgu/main/SKILL.md"
+    ).text
+    refs = carregar_referencias(tipo_artefato)
+    return f"{skill}\n\n---\n\n## Documentos Normativos Carregados\n\n{refs}"
 ```
 
-### Integração via API (Python)
-
-```python
-from pathlib import Path
-
-SKILL = Path("SKILL.md").read_text(encoding="utf-8")
-MOT   = Path("references/MOT_2017.md").read_text(encoding="utf-8")
-OP    = Path("references/OP_2019.md").read_text(encoding="utf-8")
-
-system_prompt = f"""
-{SKILL}
-
----
-
-## Documentos Normativos Carregados
-
-### MOT 2017
-{MOT}
-
-### OP 2019
-{OP}
-"""
-
-# Use system_prompt como system message em qualquer cliente OpenAI / Anthropic
-```
-
-### Exemplo de chamada (OpenAI / Azure OpenAI)
+### Exemplo de chamada (Azure OpenAI)
 
 ```python
 from openai import AzureOpenAI
@@ -145,15 +144,14 @@ client = AzureOpenAI(
     api_version="2024-02-01",
 )
 
-artefato = """
-<cole aqui o texto da Introdução ou outro artefato a ser analisado>
-"""
+tipo_artefato = "introducao"  # ou: achado, recomendacoes, conclusao, resumo, matriz, riscos
+artefato = "<cole aqui o texto a ser analisado>"
 
 response = client.chat.completions.create(
     model="gpt-5",  # nome do deployment no Azure
     messages=[
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": f"Analise a conformidade desta Introdução:\n\n{artefato}"},
+        {"role": "system", "content": montar_system_prompt(tipo_artefato)},
+        {"role": "user", "content": f"Analise a conformidade desta {tipo_artefato}:\n\n{artefato}"},
     ],
 )
 
