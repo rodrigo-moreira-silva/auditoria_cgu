@@ -47,9 +47,57 @@ cgu-auditoria-skill/
 
 ## Como Usar
 
-### Em sistemas com suporte a skills (ex: Claude)
+### Instalação no Claude (claude.ai)
 
-Registre a skill apontando para `SKILL.md`. O modelo carregará automaticamente os arquivos de referência conforme o tipo de artefato submetido.
+Não há instalação automática via repositório — a skill precisa ser carregada manualmente como contexto. Há dois caminhos:
+
+**Opção A — Project Instructions (recomendado)**
+
+Ideal para uso recorrente. Tudo que for colocado nas instruções do projeto fica disponível em todas as conversas daquele projeto.
+
+1. No [claude.ai](https://claude.ai), crie um **Project** (menu lateral → *New Project*)
+2. Abra as configurações do projeto → **Project Instructions**
+3. Cole o conteúdo completo de [`SKILL.md`](./SKILL.md) seguido dos três arquivos de referência (`MOT_2017.md`, `OP_2019.md`, `Metodologia_Riscos_2_0.md`)
+4. Salve — a skill estará ativa em todas as conversas desse projeto
+
+> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Os três arquivos de referência juntos somam ~600 KB; carregue apenas os que forem necessários para o seu caso de uso.
+
+**Opção B — Cola direto na conversa**
+
+Para uso pontual, cole o conteúdo do `SKILL.md` no início de uma conversa nova antes de submeter o artefato. Sem os arquivos de referência completos, o modelo usará seu conhecimento geral das normas — suficiente para análises básicas.
+
+---
+
+### Instalação via API (Python)
+
+Para pipelines automatizados, o script abaixo puxa os arquivos diretamente do GitHub — sem precisar clonar o repositório:
+
+```python
+import httpx
+
+BASE = "https://raw.githubusercontent.com/rodrigo-moreira-silva/auditoria_cgu/main"
+
+skill = httpx.get(f"{BASE}/SKILL.md").text
+mot   = httpx.get(f"{BASE}/references/MOT_2017.md").text
+op    = httpx.get(f"{BASE}/references/OP_2019.md").text
+riscos = httpx.get(f"{BASE}/references/Metodologia_Riscos_2_0.md").text
+
+system_prompt = f"""{skill}
+
+---
+
+## Documentos Normativos Carregados
+
+### MOT 2017
+{mot}
+
+### OP 2019
+{op}
+
+### Metodologia de Riscos 2.0
+{riscos}
+"""
+```
 
 ### Integração via API (Python)
 
