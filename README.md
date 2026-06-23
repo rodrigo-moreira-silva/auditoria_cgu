@@ -1,6 +1,6 @@
 # cgu-auditoria-skill
 
-> Skill de IA para análise de conformidade de artefatos de auditoria da CGU com as normas internas vigentes.
+> Skill de IA para análise de conformidade e geração de minutas de artefatos de auditoria da CGU, baseada nas normas internas MOT 2017, OP 2019 e Metodologia de Riscos 2.0.
 
 ---
 
