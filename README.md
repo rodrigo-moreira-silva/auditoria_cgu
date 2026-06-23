@@ -6,9 +6,13 @@
 
 ## O que é
 
-Este repositório contém uma **skill para sistemas baseados em LLM** que automatiza a verificação de conformidade de artefatos de auditoria produzidos pela Controladoria-Geral da União (CGU). A skill instrui o modelo a analisar documentos de auditoria contra três normas internas e emitir um parecer estruturado com status, pontos críticos e sugestões de melhoria.
+Este repositório contém uma **skill para sistemas baseados em LLM** que apoia equipes de auditoria da Controladoria-Geral da União (CGU) em duas frentes:
 
-Os arquivos de norma são **divididos por tema** — o modelo carrega apenas os arquivos relevantes para o tipo de artefato submetido, em vez de carregar as normas completas a cada chamada.
+**Análise de conformidade** — o modelo recebe um artefato já redigido (introdução, achado, recomendações, conclusão, matriz, SA, NA…) e verifica se está em conformidade com as normas internas da CGU, emitindo um parecer estruturado com status, pontos críticos e sugestões de melhoria.
+
+**Geração de minutas** — o modelo recebe insumos estruturados (Matriz de Achados, Matriz de Planejamento, achado estruturado, notas de campo…) e redige o artefato solicitado já conforme as normas, inserindo marcadores `[PREENCHER: ...]` onde faltar informação — sem inventar nenhum dado não fornecido pelo usuário.
+
+Os arquivos de norma são **divididos por tema** em 34 arquivos — o modelo carrega apenas os relevantes para o tipo de artefato em questão, em vez de carregar as normas completas a cada chamada.
 
 ---
 
