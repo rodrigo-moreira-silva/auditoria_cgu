@@ -159,6 +159,8 @@ que motivou a inclusão no Plano de Auditoria Interna]
 
 > ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários — não é preciso incluir todos os 34 arquivos.
 
+> ⚠️ Para análises de relatório completo ou geração de minuta com muitas seções, monitore o tamanho do contexto. Os arquivos de referência maiores (`op_recomendacoes.md`, `op_causa_raiz.md`, `riscos_metodologia.md`) somam cerca de 80KB — carregue apenas os necessários para o artefato em questão.
+
 **Opção B — Cola direto na conversa**
 
 Para uso pontual, cole o conteúdo do `SKILL.md` no início de uma conversa nova antes de submeter o artefato. Sem os arquivos de referência, o modelo usará seu conhecimento geral das normas — suficiente para análises básicas.

@@ -39,6 +39,14 @@ Use a tabela abaixo para decidir quais ler.
 > (falhas gramaticais comuns nos relatórios — apêndice F da OP 2019), independentemente
 > do tipo de artefato. Ele deve ser consultado em qualquer análise que envolva texto redigido.
 
+> **Atenção ao tamanho do contexto:** o carregamento simultâneo de muitos arquivos
+> de referência pode aproximar ou exceder o limite da janela de contexto do modelo
+> em uso (128K tokens no GPT-5/Azure, 200K no Claude). Para relatórios completos,
+> prefira carregar apenas os arquivos obrigatórios de cada seção. Carregue os
+> complementares somente quando o artefato apresentar elementos que os justifiquem
+> — por exemplo, carregue `riscos_metodologia.md` apenas se o efeito do achado
+> for expresso como risco potencial.
+
 ### Mapeamento artefato → arquivos a ler
 
 | Artefato | Arquivos obrigatórios | Arquivos complementares |
