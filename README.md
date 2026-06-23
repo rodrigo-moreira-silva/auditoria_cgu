@@ -55,10 +55,19 @@ Não há instalação automática via repositório — a skill precisa ser carre
 
 Ideal para uso recorrente. Tudo que for colocado nas instruções do projeto fica disponível em todas as conversas daquele projeto.
 
-1. No [claude.ai](https://claude.ai), crie um **Project** (menu lateral → *New Project*)
-2. Abra as configurações do projeto → **Project Instructions**
-3. Cole o conteúdo completo de [`SKILL.md`](./SKILL.md) seguido dos três arquivos de referência (`MOT_2017.md`, `OP_2019.md`, `Metodologia_Riscos_2_0.md`)
-4. Salve — a skill estará ativa em todas as conversas desse projeto
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/rodrigo-moreira-silva/auditoria_cgu.git
+   cd auditoria_cgu
+   ```
+2. No [claude.ai](https://claude.ai), crie um **Project** (menu lateral → *New Project*)
+3. Abra as configurações do projeto → **Project Instructions**
+4. Cole, em sequência, o conteúdo dos seguintes arquivos:
+   - `SKILL.md` — instruções da skill (raiz do repositório)
+   - `references/MOT_2017.md` — Manual de Orientações Técnicas 2017
+   - `references/OP_2019.md` — Orientação Prática: Relatório de Auditoria 2019
+   - `references/Metodologia_Riscos_2_0.md` — Metodologia de Riscos 2.0
+5. Salve — a skill estará ativa em todas as conversas desse projeto
 
 > ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Os três arquivos de referência juntos somam ~600 KB; carregue apenas os que forem necessários para o seu caso de uso.
 
