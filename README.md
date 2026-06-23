@@ -77,13 +77,23 @@ auditoria_cgu/
 └── README.md
 ```
 
-O `SKILL.md` contém uma tabela de mapeamento `artefato → arquivos a ler`, de forma que o modelo consulta apenas o subconjunto relevante para cada análise.
+O `SKILL.md` contém uma tabela de mapeamento `artefato → arquivos a ler`, de forma que o modelo consulta apenas o subconjunto relevante para cada operação.
 
 ---
 
-## Como Usar
+## Modos de Uso
 
-### Instalação no Claude (claude.ai)
+A skill opera em dois modos, detectados automaticamente pelo tipo de solicitação:
+
+**Modo análise** — o usuário fornece um artefato redigido e pede revisão, validação ou feedback. O modelo verifica conformidade com as normas e emite um parecer estruturado.
+
+**Modo geração** — o usuário fornece insumos estruturados (Matriz de Achados, Matriz de Planejamento ou ambas) e pede para redigir ou gerar uma minuta. O modelo redige cada seção usando exclusivamente as informações fornecidas, inserindo marcadores `[PREENCHER: ...]` onde faltar dado obrigatório.
+
+> ⚠️ **No modo geração, o modelo não inventa informações.** Nenhum valor, data, nome, causa, norma ou contextualização será criado sem respaldo nos insumos fornecidos pelo usuário.
+
+---
+
+## Como Instalar no Claude (claude.ai)
 
 **Opção A — Project Instructions (recomendado)**
 
@@ -99,7 +109,7 @@ O `SKILL.md` contém uma tabela de mapeamento `artefato → arquivos a ler`, de 
    - o conteúdo dos arquivos em `references/` relevantes para o seu caso de uso (veja tabela de mapeamento no `SKILL.md`)
 5. Salve — a skill estará ativa em todas as conversas desse projeto
 
-> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários para o seu caso de uso — não é preciso incluir todos os 34 arquivos.
+> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários — não é preciso incluir todos os 34 arquivos.
 
 **Opção B — Cola direto na conversa**
 
@@ -108,6 +118,8 @@ Para uso pontual, cole o conteúdo do `SKILL.md` no início de uma conversa nova
 ---
 
 ## Output Esperado
+
+### Modo análise
 
 ```
 ## Análise de Conformidade — [Tipo de Artefato]
@@ -134,6 +146,59 @@ O que está bem feito e merece destaque.
 ```
 
 **Legenda:** ✅ Conforme · ⚠️ Parcialmente conforme · ❌ Não conforme · ➖ Não aplicável
+
+### Modo geração
+
+```
+## Minuta de Relatório — [Objeto da Auditoria]
+
+---
+
+### Resumo
+
+[texto gerado a partir da matriz]
+
+---
+
+### Introdução
+
+[texto gerado a partir da matriz]
+
+[PREENCHER: origem e justificativa da auditoria — risco, materialidade ou criticidade
+que motivou a inclusão no Plano de Auditoria Interna]
+
+[PREENCHER: metodologia utilizada — natureza dos dados coletados, técnicas aplicadas
+e forma de tratamento]
+
+---
+
+### Resultados dos Exames
+
+#### Achado 1 — [título do achado]
+
+[texto gerado a partir da matriz]
+
+---
+
+### Recomendações
+
+[texto gerado a partir da matriz]
+
+---
+
+### Conclusão
+
+[texto gerado a partir da matriz]
+
+---
+
+## Marcadores Pendentes
+
+| Seção | Marcador |
+|---|---|
+| Introdução | Origem e justificativa da auditoria |
+| Introdução | Metodologia utilizada |
+```
 
 ---
 
