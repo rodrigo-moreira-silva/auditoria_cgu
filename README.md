@@ -252,4 +252,4 @@ e forma de tratamento]
 
 ## Contexto
 
-Desenvolvido na **Controladoria-Geral da União (CGU)** para apoiar equipes de auditoria na revisão de relatórios, com foco em consistência normativa e qualidade da redação.
+Desenvolvido na **Controladoria-Geral da União (CGU)** para apoiar equipes de auditoria em duas frentes: revisão de conformidade de artefatos já redigidos e geração de minutas a partir de insumos estruturados. A skill cobre o ciclo completo de auditoria — do planejamento ao relatório final — com base nas normas internas MOT 2017, OP 2019 e Metodologia de Riscos 2.0.
