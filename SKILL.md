@@ -35,6 +35,10 @@ Use a tabela abaixo para decidir quais ler.
 > o MOT 2017. Em caso de aparente conflito, a OP 2019 prevalece para questões de
 > elaboração do relatório.
 
+> **Arquivo obrigatório em todas as análises:** carregue sempre `references/op_apendice_gramatica.md`
+> (falhas gramaticais comuns nos relatórios — apêndice F da OP 2019), independentemente
+> do tipo de artefato. Ele deve ser consultado em qualquer análise que envolva texto redigido.
+
 ### Mapeamento artefato → arquivos a ler
 
 | Artefato | Arquivos obrigatórios | Arquivos complementares |
@@ -53,7 +57,7 @@ Use a tabela abaixo para decidir quais ler.
 | **Solicitação de Auditoria / Nota de Auditoria** | `mot_execucao_comunicacao.md`, `mot_apendice_documentos.md` | — |
 | **Papéis de trabalho** | `mot_papeis_trabalho.md` | — |
 | **Coleta e análise de dados / Evidências** | `mot_coleta_evidencias.md` | — |
-| **Qualidade da redação** (qualquer artefato) | `op_qualidade.md`, `mot_qualidade.md` | `op_apendice_paragrafos.md`, `op_apendice_gramatica.md` |
+| **Qualidade da redação** (qualquer artefato) | `op_qualidade.md`, `mot_qualidade.md` | `op_apendice_paragrafos.md` |
 | **Aspectos formais** (formatação, siglas) | `op_aspectos_formais.md` | — |
 | **Revisão do relatório** | `op_revisao.md` | — |
 | **Análise de causa raiz** | `op_causa_raiz.md` | — |
