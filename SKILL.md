@@ -47,7 +47,7 @@ Use a tabela abaixo para decidir quais ler.
 | **Lista de siglas / Sumário** | `op_siglas_sumario.md` | `op_aspectos_formais.md` |
 | **Resumo / Highlight** | `op_resumo.md` | `op_qualidade.md` |
 | **Introdução** | `op_introducao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md`, `mot_qualidade.md` |
-| **Achado** (completo) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md` |
+| **Achado** (completo) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md`, `riscos_metodologia.md` |
 | **Recomendações** | `op_recomendacoes.md`, `mot_recomendacoes.md` | — |
 | **Manifestação da unidade auditada** | `op_anexos_relatorio.md`, `mot_manifestacao_unidade.md` | — |
 | **Conclusão** | `op_conclusao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md` |
