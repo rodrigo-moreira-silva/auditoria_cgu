@@ -26,10 +26,11 @@ Os arquivos de norma são **divididos por tema** — o modelo carrega apenas os 
 
 ## Artefatos Suportados
 
-- **Seções do Relatório:** Introdução, Resultados dos Exames (Achados), Recomendações, Conclusão, Resumo (highlight)
+- **Seções do Relatório:** Capa, Folha de rosto, Missão da CGU, Lista de siglas, Sumário, Resumo (highlight), Introdução, Achados, Recomendações, Conclusão, Anexos
 - **Achados individuais:** descrição sumária, parágrafo introdutório, critério, condição, causa, consequência/efeito
 - **Instrumentos de planejamento:** Matriz de Planejamento, Matriz de Achados
-- **Documentos avulsos:** Nota de Auditoria, Solicitação de Auditoria
+- **Documentos de campo:** Solicitação de Auditoria (SA), Nota de Auditoria (NA), Papéis de trabalho
+- **Análises:** Causa raiz, Evidências, Manifestação da unidade auditada
 
 ---
 
@@ -37,26 +38,39 @@ Os arquivos de norma são **divididos por tema** — o modelo carrega apenas os 
 
 ```
 auditoria_cgu/
-├── SKILL.md                              # Definição da skill (workflow, critérios, mapeamento de arquivos)
+├── SKILL.md
 ├── references/
 │   ├── op_qualidade.md                   # OP 2019 — atributos de qualidade (cap. 1)
 │   ├── op_planejamento_relatorio.md      # OP 2019 — planejamento do relatório (cap. 2)
+│   ├── op_capa_folha_missao.md           # OP 2019 — Capa, Folha de rosto, Missão (seções 3.1–3.3)
 │   ├── op_resumo.md                      # OP 2019 — Resumo/highlight (seção 3.4)
+│   ├── op_siglas_sumario.md              # OP 2019 — Lista de siglas e Sumário (seções 3.5–3.6)
 │   ├── op_introducao.md                  # OP 2019 — Introdução (seção 3.7)
-│   ├── op_achados.md                     # OP 2019 — Achados: componentes e organização (seções 3.8–3.8.1)
+│   ├── op_achados.md                     # OP 2019 — Achados: componentes e organização (seções 3.8–3.8.2)
 │   ├── op_recomendacoes.md               # OP 2019 — Recomendações e planos de ação (seção 3.9)
 │   ├── op_conclusao.md                   # OP 2019 — Conclusão (seção 3.10)
+│   ├── op_anexos_relatorio.md            # OP 2019 — Anexos do relatório (seção 3.11)
 │   ├── op_aspectos_formais.md            # OP 2019 — Formatação, quadros, assinaturas (cap. 4)
 │   ├── op_revisao.md                     # OP 2019 — Revisão de relatórios (cap. 5)
 │   ├── op_causa_raiz.md                  # OP 2019 — Análise de causa raiz (apêndice A)
+│   ├── op_apendice_paragrafos.md         # OP 2019 — Desenvolvimento de parágrafos e argumentação (apêndice B)
 │   ├── op_matrizes.md                    # OP 2019 — Matriz de Planejamento e Achados (apêndices C e D)
-│   ├── mot_qualidade.md                  # MOT 2017 — qualidade das comunicações e redação (seções 6.2–6.3)
-│   ├── mot_estrutura_relatorio.md        # MOT 2017 — formas e componentes do relatório (seções 6.5.1–6.5.2)
-│   ├── mot_comunicacao.md                # MOT 2017 — planejamento e encaminhamento (seções 6.1, 6.4, 6.6, 6.7)
+│   ├── op_apendice_gramatica.md          # OP 2019 — Falhas gramaticais comuns (apêndice F)
+│   ├── mot_execucao_comunicacao.md       # MOT 2017 — comunicação durante a execução: SA, NA (seções 5.1–5.1.6)
+│   ├── mot_coleta_evidencias.md          # MOT 2017 — coleta de dados e evidências (seções 5.2–5.3.4)
 │   ├── mot_achados.md                    # MOT 2017 — achados: requisitos e componentes (seções 5.4–5.4.3)
+│   ├── mot_manifestacao_unidade.md       # MOT 2017 — manifestação da unidade auditada (seção 5.5)
 │   ├── mot_recomendacoes.md              # MOT 2017 — recomendações (seções 5.6–5.6.1)
-│   ├── mot_matrizes.md                   # MOT 2017 — Matrizes de Riscos, Planejamento e Achados
+│   ├── mot_papeis_trabalho.md            # MOT 2017 — papéis de trabalho (seções 5.7–5.7.6)
+│   ├── mot_qualidade.md                  # MOT 2017 — qualidade das comunicações e redação (seções 6.2–6.3)
+│   ├── mot_estrutura_relatorio.md        # MOT 2017 — formas e componentes do relatório (seções 6.5–6.5.2)
+│   ├── mot_comunicacao.md                # MOT 2017 — planejamento e encaminhamento (seções 6.1, 6.4, 6.6, 6.7)
 │   ├── mot_monitoramento.md              # MOT 2017 — monitoramento de recomendações (cap. 7)
+│   ├── mot_glossario.md                  # MOT 2017 — Glossário
+│   ├── mot_apendice_matrizes.md          # MOT 2017 — Matrizes de Riscos e Planejamento (apêndices A e B)
+│   ├── mot_apendice_documentos.md        # MOT 2017 — Exemplos de SA, NA e Documento de Apresentação (apêndices C, D e E)
+│   ├── mot_apendice_achados.md           # MOT 2017 — Exemplo de Matriz de Achados (apêndice F)
+│   ├── mot_anexos_riscos.md              # MOT 2017 — Escalas de Impacto, Probabilidade e Mapa de Riscos (anexos A, B e C)
 │   ├── riscos_fundamentos.md             # Riscos 2.0 — parâmetros legais e conceitos (caps. 1–2)
 │   ├── riscos_estrutura.md               # Riscos 2.0 — estrutura de gestão e competências (cap. 3)
 │   └── riscos_metodologia.md             # Riscos 2.0 — processo completo de gestão de riscos (cap. 4)
@@ -71,11 +85,7 @@ O `SKILL.md` contém uma tabela de mapeamento `artefato → arquivos a ler`, de 
 
 ### Instalação no Claude (claude.ai)
 
-Não há instalação automática via repositório — a skill precisa ser carregada manualmente como contexto. Há dois caminhos:
-
 **Opção A — Project Instructions (recomendado)**
-
-Ideal para uso recorrente. Tudo que for colocado nas instruções do projeto fica disponível em todas as conversas daquele projeto.
 
 1. Clone o repositório:
    ```bash
@@ -89,7 +99,7 @@ Ideal para uso recorrente. Tudo que for colocado nas instruções do projeto fic
    - o conteúdo dos arquivos em `references/` relevantes para o seu caso de uso (veja tabela de mapeamento no `SKILL.md`)
 5. Salve — a skill estará ativa em todas as conversas desse projeto
 
-> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários para o seu caso de uso — não é preciso incluir todos os 21 arquivos.
+> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários para o seu caso de uso — não é preciso incluir todos os 34 arquivos.
 
 **Opção B — Cola direto na conversa**
 
@@ -99,7 +109,7 @@ Para uso pontual, cole o conteúdo do `SKILL.md` no início de uma conversa nova
 
 ### Integração via API (Python)
 
-O script abaixo carrega seletivamente apenas os arquivos relevantes para o tipo de artefato, puxando direto do GitHub:
+O script abaixo carrega seletivamente apenas os arquivos relevantes para o tipo de artefato:
 
 ```python
 import httpx
@@ -108,13 +118,25 @@ BASE = "https://raw.githubusercontent.com/rodrigo-moreira-silva/auditoria_cgu/ma
 
 # Mapeamento: tipo de artefato → arquivos a carregar
 REFERENCIAS = {
-    "introducao":      ["op_introducao.md", "mot_estrutura_relatorio.md", "op_qualidade.md"],
-    "achado":          ["op_achados.md", "mot_achados.md", "op_causa_raiz.md"],
-    "recomendacoes":   ["op_recomendacoes.md", "mot_recomendacoes.md"],
-    "conclusao":       ["op_conclusao.md", "mot_estrutura_relatorio.md"],
-    "resumo":          ["op_resumo.md", "op_qualidade.md"],
-    "matriz":          ["op_matrizes.md", "mot_matrizes.md"],
-    "riscos":          ["riscos_metodologia.md", "riscos_fundamentos.md"],
+    "capa":              ["op_capa_folha_missao.md", "op_aspectos_formais.md"],
+    "siglas_sumario":    ["op_siglas_sumario.md", "op_aspectos_formais.md"],
+    "resumo":            ["op_resumo.md", "op_qualidade.md"],
+    "introducao":        ["op_introducao.md", "mot_estrutura_relatorio.md", "op_qualidade.md", "mot_qualidade.md"],
+    "achado":            ["op_achados.md", "mot_achados.md", "op_causa_raiz.md", "op_qualidade.md"],
+    "recomendacoes":     ["op_recomendacoes.md", "mot_recomendacoes.md"],
+    "manifestacao":      ["op_anexos_relatorio.md", "mot_manifestacao_unidade.md"],
+    "conclusao":         ["op_conclusao.md", "mot_estrutura_relatorio.md", "op_qualidade.md"],
+    "anexos":            ["op_anexos_relatorio.md"],
+    "matriz":            ["op_matrizes.md", "mot_apendice_matrizes.md", "op_planejamento_relatorio.md"],
+    "sa_na":             ["mot_execucao_comunicacao.md", "mot_apendice_documentos.md"],
+    "papeis_trabalho":   ["mot_papeis_trabalho.md"],
+    "evidencias":        ["mot_coleta_evidencias.md"],
+    "redacao":           ["op_qualidade.md", "mot_qualidade.md", "op_apendice_paragrafos.md", "op_apendice_gramatica.md"],
+    "aspectos_formais":  ["op_aspectos_formais.md"],
+    "revisao":           ["op_revisao.md"],
+    "causa_raiz":        ["op_causa_raiz.md"],
+    "riscos":            ["riscos_metodologia.md", "riscos_fundamentos.md", "riscos_estrutura.md"],
+    "monitoramento":     ["mot_monitoramento.md"],
 }
 
 def carregar_referencias(tipo_artefato: str) -> str:
@@ -144,7 +166,7 @@ client = AzureOpenAI(
     api_version="2024-02-01",
 )
 
-tipo_artefato = "introducao"  # ou: achado, recomendacoes, conclusao, resumo, matriz, riscos
+tipo_artefato = "introducao"  # ver chaves do dicionário REFERENCIAS acima
 artefato = "<cole aqui o texto a ser analisado>"
 
 response = client.chat.completions.create(
@@ -162,8 +184,6 @@ print(response.choices[0].message.content)
 
 ## Output Esperado
 
-O modelo retorna sempre na seguinte estrutura:
-
 ```
 ## Análise de Conformidade — [Tipo de Artefato]
 
@@ -175,11 +195,10 @@ Avaliação geral em 2–4 frases.
 |---|---|---|
 | Parágrafo 1 (objeto/escopo) | ✅ | Presente e completo |
 | Parágrafo 2 (origem/justificativa) | ⚠️ | Menciona risco mas omite materialidade |
-| ...
 
 ### Pontos Críticos
 **[Critério com problema]** (❌/⚠️)
-> Referência: OP 2019, seção 3.7, Quadro 2
+> Referência: OP 2019, seção 3.7
 Explicação do problema e impacto.
 
 ### Sugestões de Melhoria
@@ -189,11 +208,7 @@ Texto revisado ou orientações concretas.
 O que está bem feito e merece destaque.
 ```
 
-**Legenda de status:**
-- ✅ Conforme
-- ⚠️ Parcialmente conforme
-- ❌ Não conforme
-- ➖ Não aplicável
+**Legenda:** ✅ Conforme · ⚠️ Parcialmente conforme · ❌ Não conforme · ➖ Não aplicável
 
 ---
 

@@ -39,42 +39,65 @@ Use a tabela abaixo para decidir quais ler.
 
 | Artefato | Arquivos obrigatórios | Arquivos complementares |
 |---|---|---|
+| **Capa / Folha de rosto / Missão** | `op_capa_folha_missao.md` | `op_aspectos_formais.md` |
+| **Lista de siglas / Sumário** | `op_siglas_sumario.md` | `op_aspectos_formais.md` |
+| **Resumo / Highlight** | `op_resumo.md` | `op_qualidade.md` |
 | **Introdução** | `op_introducao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md`, `mot_qualidade.md` |
 | **Achado** (completo) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md` |
 | **Recomendações** | `op_recomendacoes.md`, `mot_recomendacoes.md` | — |
+| **Manifestação da unidade auditada** | `op_anexos_relatorio.md`, `mot_manifestacao_unidade.md` | — |
 | **Conclusão** | `op_conclusao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md` |
-| **Resumo / Highlight** | `op_resumo.md` | `op_qualidade.md` |
-| **Matriz de Planejamento** | `op_matrizes.md`, `mot_matrizes.md` | `op_planejamento_relatorio.md` |
-| **Matriz de Achados** | `op_matrizes.md`, `mot_matrizes.md` | `op_achados.md` |
-| **Qualidade da redação** (qualquer artefato) | `op_qualidade.md`, `mot_qualidade.md` | — |
+| **Anexos do relatório** | `op_anexos_relatorio.md` | — |
+| **Matriz de Planejamento** | `op_matrizes.md`, `mot_apendice_matrizes.md` | `op_planejamento_relatorio.md` |
+| **Matriz de Achados** | `op_matrizes.md`, `mot_apendice_achados.md` | `op_achados.md` |
+| **Solicitação de Auditoria / Nota de Auditoria** | `mot_execucao_comunicacao.md`, `mot_apendice_documentos.md` | — |
+| **Papéis de trabalho** | `mot_papeis_trabalho.md` | — |
+| **Coleta e análise de dados / Evidências** | `mot_coleta_evidencias.md` | — |
+| **Qualidade da redação** (qualquer artefato) | `op_qualidade.md`, `mot_qualidade.md` | `op_apendice_paragrafos.md`, `op_apendice_gramatica.md` |
 | **Aspectos formais** (formatação, siglas) | `op_aspectos_formais.md` | — |
 | **Revisão do relatório** | `op_revisao.md` | — |
+| **Análise de causa raiz** | `op_causa_raiz.md` | — |
 | **Análise de riscos** | `riscos_metodologia.md` | `riscos_fundamentos.md`, `riscos_estrutura.md` |
 | **Monitoramento de recomendações** | `mot_monitoramento.md` | — |
+| **Glossário / termos técnicos** | `mot_glossario.md` | — |
+| **Escala de impacto / probabilidade / mapa de riscos** | `mot_anexos_riscos.md` | `riscos_metodologia.md` |
 
 ### Catálogo completo dos arquivos
 
 **OP 2019**
 - `references/op_qualidade.md` — atributos de qualidade das comunicações e da redação (cap. 1)
 - `references/op_planejamento_relatorio.md` — planejamento do relatório, Matriz de Planejamento e Achados (cap. 2)
+- `references/op_capa_folha_missao.md` — Capa, Folha de rosto e Missão da CGU (seções 3.1–3.3)
 - `references/op_resumo.md` — Resumo/highlight (seção 3.4)
+- `references/op_siglas_sumario.md` — Lista de siglas e Sumário (seções 3.5–3.6)
 - `references/op_introducao.md` — Introdução: quadro de parágrafos obrigatórios (seção 3.7)
-- `references/op_achados.md` — Achados: componentes, classificação, organização (seções 3.8 e 3.8.1)
+- `references/op_achados.md` — Achados: componentes, classificação e organização (seções 3.8–3.8.2)
 - `references/op_recomendacoes.md` — Recomendações e planos de ação (seção 3.9)
 - `references/op_conclusao.md` — Conclusão do relatório (seção 3.10)
+- `references/op_anexos_relatorio.md` — Anexos do relatório: manifestação da unidade, metodologia, outros documentos (seção 3.11)
 - `references/op_aspectos_formais.md` — Formatação, quadros, tabelas, figuras, assinaturas (cap. 4)
 - `references/op_revisao.md` — Revisão de relatórios (cap. 5)
 - `references/op_causa_raiz.md` — Análise de causa raiz: técnicas e ferramentas (apêndice A)
+- `references/op_apendice_paragrafos.md` — Desenvolvimento de parágrafos e argumentação (apêndice B)
 - `references/op_matrizes.md` — Matriz de Planejamento e Matriz de Achados (apêndices C e D)
+- `references/op_apendice_gramatica.md` — Falhas gramaticais comuns nos relatórios (apêndice F)
 
 **MOT 2017**
-- `references/mot_qualidade.md` — qualidade das comunicações e da redação (seções 6.2 e 6.3)
-- `references/mot_estrutura_relatorio.md` — formas e componentes do relatório (seções 6.5.1 e 6.5.2)
-- `references/mot_comunicacao.md` — planejamento e encaminhamento das comunicações (seções 6.1, 6.4, 6.6, 6.7)
-- `references/mot_achados.md` — achados de auditoria: requisitos, componentes (seções 5.4–5.4.3)
+- `references/mot_execucao_comunicacao.md` — comunicação com a unidade auditada durante a execução: reunião de abertura, SA, NA (seções 5.1–5.1.6)
+- `references/mot_coleta_evidencias.md` — coleta e análise de dados, evidências e seus atributos (seções 5.2–5.3.4)
+- `references/mot_achados.md` — achados de auditoria: requisitos e componentes (seções 5.4–5.4.3)
+- `references/mot_manifestacao_unidade.md` — manifestação da unidade auditada (seção 5.5)
 - `references/mot_recomendacoes.md` — recomendações: características desejáveis (seções 5.6–5.6.1)
-- `references/mot_matrizes.md` — Matrizes de Riscos, Planejamento e Achados (apêndices A, B e F)
+- `references/mot_papeis_trabalho.md` — papéis de trabalho: elaboração, atributos, classificação e retenção (seções 5.7–5.7.6)
+- `references/mot_qualidade.md` — qualidade das comunicações e da redação (seções 6.2–6.3)
+- `references/mot_estrutura_relatorio.md` — formas e componentes do relatório (seções 6.5–6.5.2)
+- `references/mot_comunicacao.md` — planejamento e encaminhamento das comunicações (seções 6.1, 6.4, 6.6, 6.7)
 - `references/mot_monitoramento.md` — monitoramento de recomendações (cap. 7)
+- `references/mot_glossario.md` — Glossário de termos técnicos
+- `references/mot_apendice_matrizes.md` — Matrizes de Riscos e Planejamento (apêndices A e B)
+- `references/mot_apendice_documentos.md` — Exemplos de Documento de Apresentação, SA e NA (apêndices C, D e E)
+- `references/mot_apendice_achados.md` — Exemplo de Matriz de Achados (apêndice F)
+- `references/mot_anexos_riscos.md` — Escalas de Impacto, Probabilidade e Mapa de Riscos (anexos A, B e C)
 
 **Metodologia de Riscos 2.0**
 - `references/riscos_fundamentos.md` — parâmetros legais, frameworks e conceitos (caps. 1 e 2)
@@ -87,10 +110,11 @@ Use a tabela abaixo para decidir quais ler.
 
 Esta skill cobre qualquer artefato produzido no ciclo de auditoria da CGU:
 
-- **Seções do Relatório:** Introdução, Resultados dos Exames (Achados), Recomendações, Conclusão, Resumo (highlight), Capa, Folha de rosto, Lista de siglas
+- **Seções do Relatório:** Capa, Folha de rosto, Missão da CGU, Lista de siglas, Sumário, Resumo (highlight), Introdução, Resultados dos Exames (Achados), Recomendações, Conclusão, Anexos
 - **Achados individuais:** descrição sumária, parágrafo introdutório, critério, condição, causa, consequência/efeito
 - **Instrumentos de planejamento:** Matriz de Planejamento, Matriz de Achados
-- **Documentos avulsos:** Nota de Auditoria, Solicitação de Auditoria
+- **Documentos de campo:** Solicitação de Auditoria (SA), Nota de Auditoria (NA), Papéis de trabalho
+- **Análises:** Causa raiz, Evidências, Manifestação da unidade auditada
 
 ---
 
@@ -112,8 +136,7 @@ arquivos indicados para o tipo de artefato submetido. Não carregue arquivos des
 
 ### Passo 3 — Executar a análise
 
-Avalie o artefato contra os critérios normativos relevantes para seu tipo (veja
-seção "Critérios por Tipo de Artefato" abaixo). Para cada critério:
+Avalie o artefato contra os critérios normativos relevantes para seu tipo. Para cada critério:
 
 - ✅ **Conforme** — o artefato atende ao requisito
 - ⚠️ **Parcialmente conforme** — atende parcialmente ou há dúvida
@@ -136,8 +159,6 @@ Apresente o resultado sempre nesta ordem:
 
 ### Introdução do Relatório (OP 2019, seção 3.7; MOT 2017, seção 6.5.2)
 
-A introdução deve conter os seguintes parágrafos/conteúdos:
-
 | Parágrafo | Conteúdo obrigatório |
 |---|---|
 | 1º | Unidade auditada; objeto auditado; ação/programa orçamentário; referencial legal; escopo (o quê, quanto, quando, onde) |
@@ -152,16 +173,14 @@ Critérios adicionais:
 - Detalhes complementares devem ir para **anexo**, não para a introdução
 - Não deve conter achados; a função é contextualizar
 
-### Achado de Auditoria (OP 2019, seção 3.8 e 3.8.1)
-
-Componentes obrigatórios de cada achado:
+### Achado de Auditoria (OP 2019, seções 3.8–3.8.2; MOT 2017, seções 5.4–5.4.3)
 
 | Componente | O que verificar |
 |---|---|
-| Descrição sumária | Resume adequadamente o achado; inclui números/valores quando relevantes; não abre margem para interpretações não suportadas pelas evidências |
+| Descrição sumária | Resume adequadamente o achado; inclui números/valores quando relevantes |
 | Parágrafo introdutório | Contextualiza o achado; responde: o quê, quem, quando, quanto, onde, como, por quê |
-| Critério | Padrão utilizado para avaliação; classificado como interno, externo ou melhores práticas; definido na fase de planejamento |
-| Condição | Situação existente identificada e documentada; suficientemente evidenciada; não excessivamente detalhada (nível intermediário, não analítico) |
+| Critério | Padrão utilizado para avaliação; classificado como interno, externo ou melhores práticas |
+| Condição | Situação existente identificada e documentada; suficientemente evidenciada |
 | Causa | Razão para a diferença entre critério e condição; identifica causa raiz quando possível |
 | Consequência/Efeito | Impacto real ou potencial da condição identificada |
 
@@ -170,7 +189,7 @@ Critérios adicionais:
 - Cada achado deve responder a **pelo menos uma questão de auditoria**
 - Devem ser convincentes e fundamentados em **evidências**
 
-### Recomendações (OP 2019, seção 3.9; MOT 2017, seção 6.5.2)
+### Recomendações (OP 2019, seção 3.9; MOT 2017, seções 5.6–5.6.1)
 
 - Elaboradas **com base na causa raiz** (quando possível)
 - Práticas e viáveis
@@ -181,7 +200,6 @@ Critérios adicionais:
 
 - Emissão da **opinião final** da equipe sobre o objeto auditado
 - Pode apresentar achados de forma sintética
-- Pode mencionar benefícios decorrentes da auditoria
 - Deve ter **caráter gerencial** (alçada da alta administração)
 - Pode registrar boas práticas identificadas
 
@@ -189,7 +207,7 @@ Critérios adicionais:
 
 Deve responder a três perguntas:
 1. **Qual foi o trabalho realizado** (objeto + escopo)?
-2. **Por que foi realizado** (risco, materialidade, relevância, criticidade — não mencionar denúncias ou demandas externas)?
+2. **Por que foi realizado** (risco, materialidade, relevância, criticidade)?
 3. **Quais as conclusões e recomendações** principais?
 
 Restrições:
@@ -198,19 +216,16 @@ Restrições:
 
 ### Atributos de Qualidade da Redação (MOT 2017, seção 6.2; OP 2019, cap. 1)
 
-Aplique a todos os artefatos:
-
 | Atributo | O que verificar |
 |---|---|
 | **Clara** | Pensamento exposto de forma compreensível; uma ideia por parágrafo; linguagem acessível |
-| **Completa** | Contém todas as informações necessárias para compreender os resultados; não prolixo |
+| **Completa** | Contém todas as informações necessárias; não prolixo |
 | **Concisa** | Sem elaboração desnecessária, detalhes supérfluos ou redundância |
 | **Construtiva** | Útil para os destinatários; conduz a melhorias; tom não conflituoso |
 | **Objetiva** | Imparcial, neutra, livre de influência indevida |
 | **Precisa** | Livre de erros e distorções; fiel aos fatos e evidências |
-| **Tempestiva** | (verificar se há indicações de atraso ou defasagem) |
 | **Coerente** | Ordenação lógica; orações e parágrafos logicamente vinculados |
-| **Sóbria** | Tom comedido; sem depreciação de pessoas ou instituições; sem insinuações ou generalizações |
+| **Sóbria** | Tom comedido; sem depreciação de pessoas ou instituições |
 
 ---
 
@@ -244,7 +259,7 @@ Aplique a todos os artefatos:
 
 ## Notas de Aplicação
 
-- **Seja específico nas referências normativas**: cite sempre a seção/parágrafo da norma, não apenas o nome do documento.
+- **Seja específico nas referências normativas**: cite sempre a seção/parágrafo da norma.
 - **Não invente requisitos**: se um elemento não estiver nas normas de referência, não o exija. Anote como sugestão, não como não conformidade.
-- **Contexto importa**: a OP 2019 admite flexibilidade na estrutura da introdução ("se houver necessidade, esse roteiro poderá ser desdobrado em mais parágrafos"). Avalie a substância, não apenas a forma.
+- **Contexto importa**: a OP 2019 admite flexibilidade na estrutura da introdução. Avalie a substância, não apenas a forma.
 - **Tipos de serviço têm especificidades**: avaliação, consultoria e apuração têm nuances. Quando relevante, sinalize diferenças de tratamento previstas nas normas.

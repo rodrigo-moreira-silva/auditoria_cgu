@@ -1,3 +1,9 @@
+## 6.5 RELATÓRIO DE AUDITORIA
+
+A forma de comunicação dos resultados mais comumente utilizada na atividade de auditoria é o relatório. O relatório consiste em documento técnico por meio do qual a UAIG comunica os objetivos do trabalho, a extensão dos testes aplicados, as conclusões obtidas, as recomendações emitidas e os planos de ação propostos.
+
+O relatório de auditoria também pode comunicar opiniões gerais, as quais podem ser fornecidas como parte de um relatório individual ou, a depender do trabalho, constituir o conteúdo único de um relatório.
+
 ## 6.5.1 FORMAS DE RELATÓRIO
 
 Não há uma forma única de relatório. Diferentes destinatários normalmente têm diferentes necessidades. Assim sendo, é possível que as UAIG adaptem as formas de comunicação, o conteúdo e os níveis de detalhe, para atender a essas necessidades. Para isso, é importante considerar as seguintes perguntas sobre os destinatários:

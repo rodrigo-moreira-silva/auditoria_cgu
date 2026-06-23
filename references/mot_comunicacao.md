@@ -33,12 +33,3 @@ Tendo em vista a complexidade de alguns temas e a dificuldade de aplicação da 
 
 Se houver alterações no documento por meio do qual os resultados foram comunicados, a UAIG deverá proceder a atualização da versão publicada anteriormente.
 
-# 7 MONITORAMENTO
-
-A responsabilidade pelo atendimento às recomendações emitidas pelas UAIG compete, em primeiro lugar, aos gestores das Unidades Auditadas. Ao responsável pela UAIG cabe o estabelecimento, a manutenção e a supervisão (a qual poderá ser delegada) do processo de monitoramento¹⁰⁶ da implementação das recomendações.
-
-O monitoramento consiste na adoção de ações pela UAIG, a fim de verificar se as medidas implementadas pela Unidade Auditada estão de acordo com as recomendações emitidas pela UAIG ou com o plano de ação acordado e se aquelas medidas foram suficientes para solucionar a situação apontada como inadequada frente aos critérios adotados.
-
-À UAIG, portanto, não basta recomendar. Há a necessidade de verificar a efetividade das suas recomendações, o que constitui, a um só tempo, uma forma de a UAIG avaliar a qualidade dos seus trabalhos e também de assegurar que a atividade de Auditoria Interna Governamental contribua efetivamente para o aperfeiçoamento da gestão pública, agregando valor às Unidades Auditadas. Os objetivos da auditoria, portanto, não são atingidos plenamente com a emissão do relatório, mas somente quando a Unidade Auditada implementa as respectivas recomendações e essas são avaliadas como suficientes pela UAIG.
-
-Dessa forma, mais do que verificar o mero cumprimento de formalidades, é fundamental que a prioridade desse monitoramento seja avaliar se os processos de governança, de gerenciamento de riscos e de controles internos da gestão realmente se tornaram mais eficazes, mais eficientes e/ou mais econômicos, bem como, se for o caso, se as políticas públicas se tornaram mais efetivas.
