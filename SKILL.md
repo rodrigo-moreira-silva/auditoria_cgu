@@ -25,20 +25,61 @@ nos documentos normativos da organização.
 
 ---
 
-## Normas de Referência
+## Arquivos de Referência
 
-Leia os arquivos de referência abaixo **antes de qualquer análise**. Cada um cobre
-um domínio específico; leia todos que forem pertinentes ao artefato sob análise:
-
-| Arquivo | Conteúdo | Quando ler |
-|---|---|---|
-| `references/MOT_2017.md` | Manual de Orientações Técnicas 2017 — normas gerais de execução, comunicação e estrutura do relatório (cap. 6) | Sempre; é o documento-base |
-| `references/OP_2019.md` | Orientação Prática: Relatório de Auditoria 2019 — estrutura detalhada do relatório, componentes de cada seção, atributos de qualidade, revisão | Sempre que o artefato for uma seção do relatório |
-| `references/Metodologia_Riscos_2_0.md` | Metodologia de Gestão de Riscos 2.0 — processo de identificação, avaliação e tratamento de riscos | Quando o artefato envolver análise ou referência a riscos |
+Os arquivos de norma estão divididos por tema em `references/`. **Leia apenas os
+arquivos relevantes para o artefato em análise** — não carregue todos de uma vez.
+Use a tabela abaixo para decidir quais ler.
 
 > **Importante:** as normas são complementares. A OP 2019 detalha e operacionaliza
 > o MOT 2017. Em caso de aparente conflito, a OP 2019 prevalece para questões de
 > elaboração do relatório.
+
+### Mapeamento artefato → arquivos a ler
+
+| Artefato | Arquivos obrigatórios | Arquivos complementares |
+|---|---|---|
+| **Introdução** | `op_introducao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md`, `mot_qualidade.md` |
+| **Achado** (completo) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md` |
+| **Recomendações** | `op_recomendacoes.md`, `mot_recomendacoes.md` | — |
+| **Conclusão** | `op_conclusao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md` |
+| **Resumo / Highlight** | `op_resumo.md` | `op_qualidade.md` |
+| **Matriz de Planejamento** | `op_matrizes.md`, `mot_matrizes.md` | `op_planejamento_relatorio.md` |
+| **Matriz de Achados** | `op_matrizes.md`, `mot_matrizes.md` | `op_achados.md` |
+| **Qualidade da redação** (qualquer artefato) | `op_qualidade.md`, `mot_qualidade.md` | — |
+| **Aspectos formais** (formatação, siglas) | `op_aspectos_formais.md` | — |
+| **Revisão do relatório** | `op_revisao.md` | — |
+| **Análise de riscos** | `riscos_metodologia.md` | `riscos_fundamentos.md`, `riscos_estrutura.md` |
+| **Monitoramento de recomendações** | `mot_monitoramento.md` | — |
+
+### Catálogo completo dos arquivos
+
+**OP 2019**
+- `references/op_qualidade.md` — atributos de qualidade das comunicações e da redação (cap. 1)
+- `references/op_planejamento_relatorio.md` — planejamento do relatório, Matriz de Planejamento e Achados (cap. 2)
+- `references/op_resumo.md` — Resumo/highlight (seção 3.4)
+- `references/op_introducao.md` — Introdução: quadro de parágrafos obrigatórios (seção 3.7)
+- `references/op_achados.md` — Achados: componentes, classificação, organização (seções 3.8 e 3.8.1)
+- `references/op_recomendacoes.md` — Recomendações e planos de ação (seção 3.9)
+- `references/op_conclusao.md` — Conclusão do relatório (seção 3.10)
+- `references/op_aspectos_formais.md` — Formatação, quadros, tabelas, figuras, assinaturas (cap. 4)
+- `references/op_revisao.md` — Revisão de relatórios (cap. 5)
+- `references/op_causa_raiz.md` — Análise de causa raiz: técnicas e ferramentas (apêndice A)
+- `references/op_matrizes.md` — Matriz de Planejamento e Matriz de Achados (apêndices C e D)
+
+**MOT 2017**
+- `references/mot_qualidade.md` — qualidade das comunicações e da redação (seções 6.2 e 6.3)
+- `references/mot_estrutura_relatorio.md` — formas e componentes do relatório (seções 6.5.1 e 6.5.2)
+- `references/mot_comunicacao.md` — planejamento e encaminhamento das comunicações (seções 6.1, 6.4, 6.6, 6.7)
+- `references/mot_achados.md` — achados de auditoria: requisitos, componentes (seções 5.4–5.4.3)
+- `references/mot_recomendacoes.md` — recomendações: características desejáveis (seções 5.6–5.6.1)
+- `references/mot_matrizes.md` — Matrizes de Riscos, Planejamento e Achados (apêndices A, B e F)
+- `references/mot_monitoramento.md` — monitoramento de recomendações (cap. 7)
+
+**Metodologia de Riscos 2.0**
+- `references/riscos_fundamentos.md` — parâmetros legais, frameworks e conceitos (caps. 1 e 2)
+- `references/riscos_estrutura.md` — estrutura de gestão, competências, comunicação (cap. 3)
+- `references/riscos_metodologia.md` — processo completo: identificação, avaliação, tratamento, monitoramento (cap. 4)
 
 ---
 
@@ -64,10 +105,10 @@ Determine:
 
 Se o usuário não informar o tipo de serviço e isso for relevante para a análise, pergunte antes de continuar.
 
-### Passo 2 — Carregar a norma pertinente
+### Passo 2 — Carregar apenas os arquivos pertinentes
 
-Leia os arquivos de referência conforme a tabela acima. Para análise de seções do
-relatório, leia **sempre** o MOT_2017 (cap. 6, seção 6.5.2) e o OP_2019 (cap. 3).
+Consulte a tabela "Mapeamento artefato → arquivos a ler" acima e leia **somente** os
+arquivos indicados para o tipo de artefato submetido. Não carregue arquivos desnecessários.
 
 ### Passo 3 — Executar a análise
 
@@ -170,31 +211,6 @@ Aplique a todos os artefatos:
 | **Tempestiva** | (verificar se há indicações de atraso ou defasagem) |
 | **Coerente** | Ordenação lógica; orações e parágrafos logicamente vinculados |
 | **Sóbria** | Tom comedido; sem depreciação de pessoas ou instituições; sem insinuações ou generalizações |
-
----
-
-## Referências Cruzadas Rápidas
-
-Use estes atalhos para localizar conteúdo específico nas normas:
-
-**MOT 2017:**
-- Atributos de qualidade das comunicações → seção 6.2
-- Qualidade da redação → seção 6.3
-- Formas de relatório → seção 6.5.1
-- Componentes do relatório → seção 6.5.2
-
-**OP 2019:**
-- Atributos de qualidade → cap. 1
-- Matriz de Planejamento e Achados → cap. 2
-- Estrutura do relatório (todas as seções) → cap. 3
-- Introdução (quadro de parágrafos) → seção 3.7, Quadro 2
-- Componentes do achado → seção 3.8.1
-- Aspectos formais (formatação, siglas, assinaturas) → cap. 4
-- Revisão do relatório → cap. 5
-
-**Metodologia de Riscos 2.0:**
-- Processo de gerenciamento de riscos → seção principal
-- Identificação, avaliação e tratamento → seções específicas
 
 ---
 
