@@ -159,6 +159,69 @@ Apresente o resultado sempre nesta ordem:
 
 ---
 
+## Workflow de Geração de Minuta
+
+### Quando usar este modo
+
+Use o modo geração quando o usuário fornecer insumos estruturados (Matriz de Achados, Matriz de Planejamento ou ambas) e pedir para **redigir**, **gerar** ou **elaborar** uma minuta ou seção do relatório — em vez de revisar um texto já existente.
+
+### Regra absoluta: proibido inventar informações
+
+**O modelo não deve, em hipótese alguma, gerar informações que não foram fornecidas pelo usuário.** Isso inclui:
+
+- Valores, datas, percentuais ou quantitativos não presentes na matriz
+- Nomes de unidades, programas, normas ou agentes não mencionados
+- Causas, efeitos ou recomendações não constantes da matriz
+- Qualquer contextualização, histórico ou justificativa não fornecida
+
+Quando uma informação obrigatória para a seção não estiver disponível, o modelo **deve inserir um marcador** no lugar, nunca preencher com suposição ou texto genérico.
+
+### Formato dos marcadores
+
+Use sempre o padrão abaixo, com instrução clara do que precisa ser fornecido:
+
+```
+[PREENCHER: <descrição objetiva do que é necessário>]
+```
+
+Exemplos:
+- `[PREENCHER: origem e justificativa da auditoria — risco, materialidade ou criticidade que motivou a inclusão no Plano de Auditoria Interna]`
+- `[PREENCHER: metodologia utilizada — natureza dos dados coletados, técnicas aplicadas e forma de tratamento]`
+- `[PREENCHER: período de referência do escopo da auditoria]`
+
+### Passo 1 — Identificar os insumos disponíveis
+
+Verifique o que o usuário forneceu:
+- **Matriz de Achados** → permite gerar: Achados, Recomendações, Conclusão e parcialmente a Introdução
+- **Matriz de Planejamento** → complementa com: questões de auditoria, escopo, objeto, justificativa
+- **Ambas** → permite gerar o relatório completo, com menos marcadores
+
+### Passo 2 — Carregar os arquivos de referência
+
+Para geração de minuta completa, carregue:
+
+| Seção a gerar | Arquivos obrigatórios |
+|---|---|
+| Resumo (highlight) | `op_resumo.md` |
+| Introdução | `op_introducao.md`, `mot_estrutura_relatorio.md` |
+| Achados | `op_achados.md`, `mot_achados.md` |
+| Recomendações | `op_recomendacoes.md`, `mot_recomendacoes.md` |
+| Conclusão | `op_conclusao.md`, `mot_estrutura_relatorio.md` |
+
+Sempre carregue também: `op_qualidade.md`, `mot_qualidade.md`, `op_apendice_gramatica.md`.
+
+### Passo 3 — Gerar seção por seção
+
+Redija cada seção na ordem do relatório, usando **exclusivamente** as informações da matriz fornecida. Para cada campo obrigatório da seção que não tiver dado correspondente na matriz, insira o marcador `[PREENCHER: ...]` com instrução específica.
+
+Ao final de cada seção gerada, liste os marcadores inseridos nela para que o usuário saiba exatamente o que precisa completar.
+
+### Passo 4 — Consolidar
+
+Ao final da minuta completa, apresente um **resumo dos marcadores pendentes** agrupados por seção, para facilitar o preenchimento pelo usuário.
+
+---
+
 ## Critérios por Tipo de Artefato
 
 ### Introdução do Relatório (OP 2019, seção 3.7; MOT 2017, seção 6.5.2)
