@@ -85,7 +85,29 @@ O `SKILL.md` contém uma tabela de mapeamento `artefato → arquivos a ler`, de 
 
 A skill opera em dois modos, detectados automaticamente pelo tipo de solicitação:
 
-**Modo análise** — o usuário fornece um artefato redigido e pede revisão, validação ou feedback. O modelo verifica conformidade com as normas e emite um parecer estruturado.
+**Modo análise** — o usuário fornece um artefato já redigido e pede revisão, validação ou feedback. O modelo verifica a conformidade do texto com as normas internas da CGU (MOT 2017, OP 2019 e Metodologia de Riscos 2.0) e emite um parecer estruturado.
+
+**Artefatos aceitos para análise:**
+
+| Artefato | Exemplos de solicitação |
+|---|---|
+| Introdução do relatório | "Revise esta introdução", "Está conforme a OP 2019?" |
+| Achado individual | "Analise este achado", "O critério está bem definido?" |
+| Recomendações | "As recomendações estão adequadas?", "Revise as recomendações" |
+| Conclusão | "Cheque a conclusão do relatório" |
+| Resumo / highlight | "O resumo está correto?" |
+| Matriz de Planejamento ou Achados | "Valide esta matriz" |
+| SA / NA | "Esta SA está conforme?" |
+| Qualquer seção ou trecho do relatório | "Me dá um feedback sobre este trecho" |
+
+**Como acionar o modo análise:** forneça o texto do artefato e use verbos como "revise", "analise", "valide", "confira", "está conforme?", "me dá um feedback". O modelo identifica automaticamente o tipo de artefato e carrega as normas correspondentes antes de emitir o parecer.
+
+**O parecer é sempre estruturado em:**
+- **Síntese** — avaliação geral em 2–4 frases
+- **Tabela de conformidade** — cada critério com status (✅ ⚠️ ❌ ➖) e observação
+- **Pontos críticos** — explicação detalhada dos problemas, com referência à norma
+- **Sugestões de melhoria** — texto revisado ou orientações concretas
+- **Pontos positivos** — o que está bem feito e merece destaque
 
 **Modo geração** — o usuário fornece insumos estruturados e pede para redigir ou gerar um artefato. O modelo produz o texto já conforme as normas, usando exclusivamente as informações fornecidas.
 
