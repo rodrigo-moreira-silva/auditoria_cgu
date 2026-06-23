@@ -87,7 +87,7 @@ A skill opera em dois modos, detectados automaticamente pelo tipo de solicitaç�
 
 **Modo análise** — o usuário fornece um artefato redigido e pede revisão, validação ou feedback. O modelo verifica conformidade com as normas e emite um parecer estruturado.
 
-**Modo geração** — o usuário fornece insumos estruturados (Matriz de Achados, Matriz de Planejamento ou ambas) e pede para redigir ou gerar uma minuta. O modelo redige cada seção usando exclusivamente as informações fornecidas, inserindo marcadores `[PREENCHER: ...]` onde faltar dado obrigatório.
+**Modo geração** — o usuário fornece insumos estruturados (Matriz de Achados, Matriz de Planejamento, achado estruturado, notas de campo, dados de acompanhamento…) e pede para redigir ou gerar qualquer artefato — relatório completo, seção isolada, achado individual, SA ou NA. O modelo redige usando exclusivamente as informações fornecidas, inserindo marcadores `[PREENCHER: ...]` onde faltar dado obrigatório.
 
 > ⚠️ **No modo geração, o modelo não inventa informações.** Nenhum valor, data, nome, causa, norma ou contextualização será criado sem respaldo nos insumos fornecidos pelo usuário.
 
