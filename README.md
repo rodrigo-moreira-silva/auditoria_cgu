@@ -51,7 +51,9 @@ auditoria_cgu/
 │   ├── op_siglas_sumario.md              # OP 2019 — Lista de siglas e Sumário (seções 3.5–3.6)
 │   ├── op_introducao.md                  # OP 2019 — Introdução (seção 3.7)
 │   ├── op_achados.md                     # OP 2019 — Achados: componentes e organização (seções 3.8–3.8.2)
-│   ├── op_recomendacoes.md               # OP 2019 — Recomendações e planos de ação (seção 3.9)
+│   ├── op_recomendacoes_caracteristicas.md # OP 2019 — Recomendações: características, foco e tipos (seção 3.9)
+│   ├── op_recomendacoes_planos_acao.md     # OP 2019 — Planos de ação e orientações gerais (seção 3.9)
+│   ├── op_recomendacoes_responsabilizacao.md # OP 2019 — Evidências para responsabilização (seção 3.9)
 │   ├── op_conclusao.md                   # OP 2019 — Conclusão (seção 3.10)
 │   ├── op_anexos_relatorio.md            # OP 2019 — Anexos do relatório (seção 3.11)
 │   ├── op_aspectos_formais.md            # OP 2019 — Formatação, quadros, assinaturas (cap. 4)
@@ -77,7 +79,10 @@ auditoria_cgu/
 │   ├── mot_anexos_riscos.md              # MOT 2017 — Escalas de Impacto, Probabilidade e Mapa de Riscos (anexos A, B e C)
 │   ├── riscos_fundamentos.md             # Riscos 2.0 — parâmetros legais e conceitos (caps. 1–2)
 │   ├── riscos_estrutura.md               # Riscos 2.0 — estrutura de gestão e competências (cap. 3)
-│   └── riscos_metodologia.md             # Riscos 2.0 — processo completo de gestão de riscos (cap. 4)
+│   ├── riscos_planejamento_contexto.md   # Riscos 2.0 — Plano de Gestão e contexto (seções 4.1–4.2)
+│   ├── riscos_identificacao_avaliacao.md # Riscos 2.0 — identificação de riscos e controles (seções 4.3–4.4)
+│   ├── riscos_calculo_respostas.md       # Riscos 2.0 — cálculo de níveis, matriz e respostas (seções 4.5–4.6)
+│   └── riscos_implementacao_monitoramento.md # Riscos 2.0 — implementação, monitoramento e reavaliação (seções 4.7–4.9)
 └── README.md
 ```
 
@@ -157,7 +162,7 @@ que motivou a inclusão no Plano de Auditoria Interna]
    - o conteúdo dos arquivos em `references/` relevantes para o seu caso de uso (veja tabela de mapeamento no `SKILL.md`)
 5. Salve — a skill estará ativa em todas as conversas desse projeto
 
-> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários — não é preciso incluir todos os 34 arquivos.
+> ⚠️ O limite de contexto do Claude é de ~200 mil tokens. Carregue apenas os arquivos de referência necessários — não é preciso incluir todos os 40 arquivos.
 
 > ⚠️ Para análises de relatório completo ou geração de minuta com muitas seções, monitore o tamanho do contexto. Os arquivos de referência maiores (`op_recomendacoes.md`, `op_causa_raiz.md`, `riscos_metodologia.md`) somam cerca de 80KB — carregue apenas os necessários para o artefato em questão.
 

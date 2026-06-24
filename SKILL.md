@@ -55,8 +55,11 @@ Use a tabela abaixo para decidir quais ler.
 | **Lista de siglas / Sumário** | `op_siglas_sumario.md` | `op_aspectos_formais.md` |
 | **Resumo / Highlight** | `op_resumo.md` | `op_qualidade.md` |
 | **Introdução** | `op_introducao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md`, `mot_qualidade.md` |
-| **Achado** (completo) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md`, `riscos_metodologia.md` |
-| **Recomendações** | `op_recomendacoes.md`, `mot_recomendacoes.md` | — |
+| **Achado** (sem risco no efeito) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md` |
+| **Achado** (efeito expresso como risco) | `op_achados.md`, `mot_achados.md` | `op_causa_raiz.md`, `op_qualidade.md`, `riscos_calculo_respostas.md` |
+| **Recomendação simples** | `op_recomendacoes_caracteristicas.md`, `mot_recomendacoes.md` | — |
+| **Recomendação com plano de ação** | `op_recomendacoes_caracteristicas.md`, `op_recomendacoes_planos_acao.md`, `mot_recomendacoes.md` | — |
+| **Responsabilização** | `op_recomendacoes_responsabilizacao.md` | — |
 | **Manifestação da unidade auditada** | `op_anexos_relatorio.md`, `mot_manifestacao_unidade.md` | — |
 | **Conclusão** | `op_conclusao.md`, `mot_estrutura_relatorio.md` | `op_qualidade.md` |
 | **Anexos do relatório** | `op_anexos_relatorio.md` | — |
@@ -69,7 +72,9 @@ Use a tabela abaixo para decidir quais ler.
 | **Aspectos formais** (formatação, siglas) | `op_aspectos_formais.md` | — |
 | **Revisão do relatório** | `op_revisao.md` | — |
 | **Análise de causa raiz** | `op_causa_raiz.md` | — |
-| **Análise de riscos** | `riscos_metodologia.md` | `riscos_fundamentos.md`, `riscos_estrutura.md` |
+| **Identificação/avaliação de riscos** | `riscos_identificacao_avaliacao.md` | `riscos_planejamento_contexto.md`, `riscos_fundamentos.md` |
+| **Cálculo e resposta a riscos** | `riscos_calculo_respostas.md` | `riscos_identificacao_avaliacao.md` |
+| **Monitoramento de riscos** | `riscos_implementacao_monitoramento.md` | `riscos_calculo_respostas.md` |
 | **Monitoramento de recomendações** | `mot_monitoramento.md` | — |
 | **Glossário / termos técnicos** | `mot_glossario.md` | — |
 | **Escala de impacto / probabilidade / mapa de riscos** | `mot_anexos_riscos.md` | `riscos_metodologia.md` |
@@ -84,7 +89,9 @@ Use a tabela abaixo para decidir quais ler.
 - `references/op_siglas_sumario.md` — Lista de siglas e Sumário (seções 3.5–3.6)
 - `references/op_introducao.md` — Introdução: quadro de parágrafos obrigatórios (seção 3.7)
 - `references/op_achados.md` — Achados: componentes, classificação e organização (seções 3.8–3.8.2)
-- `references/op_recomendacoes.md` — Recomendações e planos de ação (seção 3.9)
+- `references/op_recomendacoes_caracteristicas.md` — Recomendações: características desejáveis, foco e tipos (seção 3.9)
+- `references/op_recomendacoes_planos_acao.md` — Planos de ação e orientações gerais (seção 3.9)
+- `references/op_recomendacoes_responsabilizacao.md` — Evidências para responsabilização (seção 3.9)
 - `references/op_conclusao.md` — Conclusão do relatório (seção 3.10)
 - `references/op_anexos_relatorio.md` — Anexos do relatório: manifestação da unidade, metodologia, outros documentos (seção 3.11)
 - `references/op_aspectos_formais.md` — Formatação, quadros, tabelas, figuras, assinaturas (cap. 4)
@@ -114,7 +121,10 @@ Use a tabela abaixo para decidir quais ler.
 **Metodologia de Riscos 2.0**
 - `references/riscos_fundamentos.md` — parâmetros legais, frameworks e conceitos (caps. 1 e 2)
 - `references/riscos_estrutura.md` — estrutura de gestão, competências, comunicação (cap. 3)
-- `references/riscos_metodologia.md` — processo completo: identificação, avaliação, tratamento, monitoramento (cap. 4)
+- `references/riscos_planejamento_contexto.md` — Plano de Gestão de Riscos e entendimento do contexto (seções 4.1–4.2)
+- `references/riscos_identificacao_avaliacao.md` — identificação de riscos e avaliação de controles (seções 4.3–4.4)
+- `references/riscos_calculo_respostas.md` — cálculo de níveis de risco, matriz e respostas (seções 4.5–4.6)
+- `references/riscos_implementacao_monitoramento.md` — implementação, comunicação, monitoramento e reavaliação (seções 4.7–4.9)
 
 ---
 
